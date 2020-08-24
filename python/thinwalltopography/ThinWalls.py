@@ -1,4 +1,4 @@
-from GMesh import GMesh
+from thinwalltopography import GMesh
 import numpy
 
 class ThinWalls(GMesh):
@@ -81,7 +81,7 @@ class ThinWalls(GMesh):
             XY[::2,1::2] = xy
             XY[2::2,1:-1:2] = XY[2::2,1:-1:2] + dl*thickness/2
             XY[1::2,1::2] = xy
-            XY[1:-1:2,1:-1:2] = XY[1:-1:2,1:-1:2] + dr*thickness/2 
+            XY[1:-1:2,1:-1:2] = XY[1:-1:2,1:-1:2] + dr*thickness/2
             return XY
         lon = copy_coord(self.lon)
         lat = copy_coord(self.lat)
